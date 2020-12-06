@@ -1,6 +1,7 @@
 .user__card__wrapper{
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .user__card__wrapper > img{
@@ -9,6 +10,13 @@
   max-height: 100%;
 }
 
-.user__card__wrapper div{
+.user__name{
+    color: #f0f0f0;
     background-color: #15a1ff;
+}
+
+.tick__icon{
+    color: #15a1ff;
+    position: absolute;
+    right: 2px;
 }

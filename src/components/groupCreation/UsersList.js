@@ -4,7 +4,9 @@ import UserCard from './UserCard';
 
 function UsersList(props) {
 
-    const {users} = props;
+    const {users,
+            selectUser,
+            removeSelectedUser} = props;
 
     return (
         <div className="users__list_wrapper">
@@ -13,7 +15,9 @@ function UsersList(props) {
                                         key={user.Id} 
                                         name={user.name}
                                         Image={user.Image}
-                                        id={user.Id}
+                                        id={user.id}
+                                        selectUser={selectUser}
+                                        removeSelectedUser={removeSelectedUser}
                                     />)
             }
         </div>

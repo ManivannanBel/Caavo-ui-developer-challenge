@@ -2,3 +2,30 @@
     padding-left: 5rem;
     padding-right: 5rem;
 }
+
+.create_group_header{
+    color: #f0f0f0;
+}
+
+.btn{
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 10px;
+    color: #f0f0f0;
+}
+
+.btn:focus{
+    outline: unset;
+}
+
+.update__btn{
+    background-color: #3c2ff0;
+    border: 2px solid #1e11da;
+}
+
+.remove__btn{
+    background-color: #db2d2d;
+    border: 2px solid #af1b1b;
+}
+
