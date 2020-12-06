@@ -13,11 +13,22 @@ function GroupDetails(props) {
         setGroupLogo
      } = props;
 
+     const handleImageSelect = (e) => {
+        e.preventDefault();
+        let image = e.target.files[0];
+        setGroupLogo(image);
+     }
+
     return (
         <section className={'group__details__wrapper'}>
             <div className="img__wrapper">
-                <GroupIcon />
-                <input className="group_img_upload" id="grp-logo-img-upld" type="file"/>
+                {groupLogo === null &&
+                    <GroupIcon />
+                }
+                {groupLogo !== null &&
+                    <img src={URL.createObjectURL(groupLogo)} />
+                }
+                <input className="group_img_upload" id="grp-logo-img-upld" type="file" onChange={handleImageSelect}/>
             </div>
             <span className="inp__label">Name</span>
             <input
@@ -26,6 +37,7 @@ function GroupDetails(props) {
                 value={groupName} 
                 placeholder="group name"
                 onChange={(e) => setGroupName(e.target.value)}
+                required
             />
             <span className="inp__label">Description</span>
             <input 
@@ -34,6 +46,7 @@ function GroupDetails(props) {
                 value={groupDescription} 
                 placeholder="group description"
                 onChange={(e) => setGroupDescription(e.target.value)}
+                required
             />
         </section>
     )

@@ -11,6 +11,6 @@ export const fetchUsers = () => async dispatch => {
         })
     }catch(err){
         console.log(err);
-        
+                
     }
 }
