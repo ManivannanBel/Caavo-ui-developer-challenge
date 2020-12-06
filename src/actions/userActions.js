@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const fetchUsers = () => async dispatch => {
     try{
-        const usersResponse = await axios.get(`/he-public-data/users49b8675.json`);
+        const usersResponse = await axios.get(`https://s3-ap-southeast-1.amazonaws.com/he-public-data/users49b8675.json`);
         console.log(usersResponse.data);
         dispatch({
             type : FETCH_USERS,
@@ -11,6 +11,6 @@ export const fetchUsers = () => async dispatch => {
         })
     }catch(err){
         console.log(err);
-                
+
     }
 }
