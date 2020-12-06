@@ -1,0 +1,14 @@
+.user__card__wrapper{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user__card__wrapper > img{
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.user__card__wrapper div{
+    background-color: #15a1ff;
+}
