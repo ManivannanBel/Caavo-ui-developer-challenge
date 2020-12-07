@@ -1,9 +1,6 @@
 [[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
-
-[[headers]]
-    for = "/*"
-        [headers.values]
-        Access-Control-Allow-Origin = "*"
+  from = "/*"
+  to = "https://s3-ap-southeast-1.amazonaws.com"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
