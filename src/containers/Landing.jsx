@@ -22,7 +22,8 @@ const Landing = (props) => {
                 {groups.map(group =>
                     <> 
                     <ListItem style={{marginBottom : '10px', display:'unset'}} button>
-                        <img style={{left : 0, height: '50px', width : '50px'}} src={URL.createObjectURL(group.logo)} />
+                        {group.logo &&
+                            <img style={{left : 0, height: '50px', width : '50px'}} src={URL.createObjectURL(group.logo)} />}
                         <div>
                         {`group name : ${group.name}`}
                         </div>
