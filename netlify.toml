@@ -1,6 +1,4 @@
-[[redirects]]
-  from = "/*"
-  to = "https://s3-ap-southeast-1.amazonaws.com"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
+[build]
+  command = "yarn build && cd functions/node-fetch && yarn"
+  functions = "functions"
+  publish = "dist"
